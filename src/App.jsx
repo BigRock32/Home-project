@@ -7,31 +7,31 @@ function App() {
   return (
     <div className='restaurants'>
       {
-        restaurants.map((item) => (
-          <div className='restaurants__item' key={item.id}>
+        restaurants.map(({ id, name, menu, reviews }) => (
+          <div className='restaurants__item' key={id}>
 
-            <h2>{item.name}</h2>
+            <h2>{name}</h2>
 
             <h3>Меню</h3>
             <ul>
-              {item.menu.map((item) => (
-                <li key={item.id}>
-                  {item.name}
+              {menu.map((dish) => (
+                <li key={dish.id}>
+                  {dish.name}
                 </li>
               ))}
             </ul>
 
             <h3>Отзывы</h3>
             <ul>
-              {item.reviews.map((item) => (
-                <li key={item.id}>
-                  <h4>{item.user}</h4>
-                  {item.text}
+              {reviews.map((review) => (
+                <li key={review.id}>
+                  <h4>{review.user}</h4>
+                  {review.text}
                 </li>
               ))}
             </ul>
 
-            <div className="devider"></div>
+            <div className="divider" />
           </div>
         )
         )}
