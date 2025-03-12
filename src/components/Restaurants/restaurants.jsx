@@ -16,10 +16,7 @@ export const Restaurants = ({ activeRestaurant }) => {
                      <Menu menu={menu} />
                      <Reviews reviews={reviews} />
                      <div className="divider" />
-                  </div>) :
-                  (
-                     <div>Сейчас нет доступных ресторанов</div>
-                  )
+                  </div>) : null
             )
             )}
 
