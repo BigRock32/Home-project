@@ -12,9 +12,13 @@ export const Restaurants = ({ activeRestaurant }) => {
             restaurants.map(({ id, name, menu, reviews }) => (
                id === activeRestaurant ? (
                   <div className='restaurants__item' key={id}>
+
                      <h2>{name}</h2>
-                     <Menu menu={menu} />
-                     <Reviews reviews={reviews} />
+                     
+                     {menu.length > 0 ? <Menu menu={menu} /> : 'Блюда отсутствуют'}
+
+                     {reviews.length > 0 ? <Reviews reviews={reviews} /> : 'Отзывы отсутствуют'}
+
                      <div className="divider" />
                   </div>) : null
             )

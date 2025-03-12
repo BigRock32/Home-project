@@ -16,10 +16,10 @@ export const UseCounter = () => {
    }
 
    return (
-      <div>
-         <button onClick={decrementCounter}>-</button>
-         <div>{counterValue}</div>
-         <button onClick={incrementCounter}>+</button>
+      <div className='counter'>
+         <button className='counter__btn' onClick={decrementCounter}>-</button>
+         <div className='counter__value'>{counterValue}</div>
+         <button className='counter__btn' onClick={incrementCounter}>+</button>
       </div>
    )
 }

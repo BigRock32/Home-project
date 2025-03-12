@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { UseCounter } from '../../hooks/use-counter'
 
 export const Menu = ({ menu }) => {
    return (
       <>
          <h3>Меню</h3>
-         <ul>
+         <ul className='menu'>
             {menu.map((dish) => (
                <li key={dish.id}>
                   {dish.name}
