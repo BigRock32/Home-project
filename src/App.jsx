@@ -1,41 +1,19 @@
 
 import './App.css'
-import { restaurants } from './materials/mock'
+import { Layout } from './components/Layout'
+import { Restaurants } from './components/Restaurants'
+import { Filters } from './components/Filters'
+import { useState } from 'react';
+import { restaurants } from './materials/mock';
 
 function App() {
+  const [activeRestaurant, setActiveRestaurant] = useState(restaurants[0].id);
 
   return (
-    <div className='restaurants'>
-      {
-        restaurants.map(({ id, name, menu, reviews }) => (
-          <div className='restaurants__item' key={id}>
-
-            <h2>{name}</h2>
-
-            <h3>Меню</h3>
-            <ul>
-              {menu.map((dish) => (
-                <li key={dish.id}>
-                  {dish.name}
-                </li>
-              ))}
-            </ul>
-
-            <h3>Отзывы</h3>
-            <ul>
-              {reviews.map((review) => (
-                <li key={review.id}>
-                  <h4>{review.user}</h4>
-                  {review.text}
-                </li>
-              ))}
-            </ul>
-
-            <div className="divider" />
-          </div>
-        )
-        )}
-    </div>
+    <Layout>
+      <Filters activeRestaurant={activeRestaurant} setActiveRestaurant={setActiveRestaurant} />
+      <Restaurants activeRestaurant={activeRestaurant} setActiveRestaurant={setActiveRestaurant} />
+    </Layout>
   )
 }
 

@@ -1,3 +1,31 @@
+.header__wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid black;
+   border-radius: 10px;
+   padding: 20px;
+}
+
+.footer__wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid black;
+   border-radius: 10px;
+   padding: 20px;
+}
+
+.section {
+   padding: 40px 0;
+}
+
+.container {
+   width: 100%;
+   max-width: 1250px;
+   margin: 0 auto;
+}
+
 .restaurants {
    display: flex;
    flex-direction: column;
@@ -15,4 +43,22 @@
 .divider {
    height: 1px;
    background-color: black;
+}
+
+.filters {
+   display: flex;
+   gap: 30px;
+   margin-bottom: 20px;
+}
+
+.filters__item {
+   padding: 10px 20px;
+   border: 1px solid black;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.filters__item_active {
+   background-color: grey;
+   color: white;
 }
