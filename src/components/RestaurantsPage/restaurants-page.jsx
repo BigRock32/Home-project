@@ -8,11 +8,16 @@ import { restaurants } from '../../materials/mock';
 
 export const RestaurantsPage = () => {
    const [activeRestaurantId, setActiveRestaurantId] = useState(restaurants[0].id);
+   const activeRestaurant = restaurants.find((restaurant) => restaurant.id === activeRestaurantId);
 
    return (
       <>
          <RestaurantsFilters activeRestaurantId={activeRestaurantId} setActiveRestaurantId={setActiveRestaurantId} />
-         <Restaurant activeRestaurantId={activeRestaurantId} setActiveRestaurantId={setActiveRestaurantId} />
+         {
+            activeRestaurant && (
+               <Restaurant restaurant={activeRestaurant} />
+            )
+         }
       </>
    )
 }

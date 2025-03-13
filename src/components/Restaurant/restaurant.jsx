@@ -1,18 +1,20 @@
 import React from 'react'
-import { restaurants } from '../../materials/mock'
-import { RestaurantItem } from './restaurant-item'
+import { Menu } from '../Menu'
+import { Reviews } from '../Reviews'
 
-
-export const Restaurant = ({ activeRestaurantId }) => {
-   const activeRestaurant = restaurants.find((restaurant) => restaurant.id === activeRestaurantId);
+export const Restaurant = ({ restaurant }) => {
+   const { id, name, menu, reviews } = restaurant
 
    return (
-      <div className='restaurants'>
-         {
-            activeRestaurant && (
-               <RestaurantItem activeRestaurant={activeRestaurant} />
-            )
-         }
+      <div className='restaurants__item' key={id}>
+
+         <h2>{name}</h2>
+
+         {menu.length > 0 ? <Menu menu={menu} /> : 'Блюда отсутствуют'}
+
+         {reviews.length > 0 ? <Reviews reviews={reviews} /> : 'Отзывы отсутствуют'}
+
+         <div className="divider" />
       </div>
    )
 }
