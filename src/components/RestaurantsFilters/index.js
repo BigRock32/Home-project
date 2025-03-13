@@ -1,0 +1,1 @@
+export { RestaurantsFilters } from './restaurants-filters'
