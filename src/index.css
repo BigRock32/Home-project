@@ -1,3 +1,39 @@
+body {
+   font-family: sans-serif;
+}
+
+/* Header */
+.header__wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid black;
+   border-radius: 10px;
+   padding: 20px;
+}
+
+/* Footer */
+.footer__wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid black;
+   border-radius: 10px;
+   padding: 20px;
+}
+
+/* Section */
+.section {
+   padding: 40px 0;
+}
+
+.container {
+   width: 100%;
+   max-width: 1250px;
+   margin: 0 auto;
+}
+
+/* Restaurants */
 .restaurants {
    display: flex;
    flex-direction: column;
@@ -12,7 +48,41 @@
    min-width: 400px;
 }
 
+/* Divider */
 .divider {
    height: 1px;
    background-color: black;
+}
+
+/* Filters */
+.filters {
+   display: flex;
+   gap: 30px;
+   margin-bottom: 20px;
+}
+
+.filters__item {
+   padding: 10px 20px;
+   border: 1px solid black;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.filters__item_active {
+   background-color: grey;
+   color: white;
+}
+
+/* Menu */
+.menu {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+
+/* Counter */
+.counter {
+   display: flex;
+   gap: 10px;
+   margin-top: 5px;
 }
