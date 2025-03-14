@@ -6,7 +6,7 @@ export const Restaurant = ({ restaurant }) => {
    const { id, name, menu, reviews } = restaurant
 
    return (
-      <div className='restaurants__item' key={id}>
+      <div className='restaurants__item'>
 
          <h2>{name}</h2>
 
