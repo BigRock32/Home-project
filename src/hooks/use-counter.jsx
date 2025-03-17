@@ -4,9 +4,10 @@ const max = 5
 const min = 0
 
 export const UseCounter = () => {
-   const [counterValue, setCounterValue] = useState(0)
+   const [counterValue, setCounterValue] = useState(min)
 
    const incrementCounter = () => {
+      console.log('increment')
       if (counterValue < max) {
          setCounterValue(counterValue + 1)
       }
@@ -18,11 +19,10 @@ export const UseCounter = () => {
       }
    }
 
-   return (
-      <div className='counter'>
-         <button className='counter__btn' onClick={decrementCounter}>-</button>
-         <div className='counter__btn'>{counterValue}</div>
-         <button className='counter__btn' onClick={incrementCounter}>+</button>
-      </div>
-   )
+   return {
+      counterValue,
+      incrementCounter,
+      decrementCounter
+   }
+
 }
