@@ -1,5 +1,5 @@
 import React from 'react'
-import { UseCounter } from '../../hooks/use-counter'
+import { DishCounter } from '../DishCounter/dish-counter'
 
 export const Menu = ({ menu }) => {
    return (
@@ -9,7 +9,7 @@ export const Menu = ({ menu }) => {
             {menu.map((dish) => (
                <li key={dish.id}>
                   {dish.name}
-                  <UseCounter />
+                  <DishCounter />
                </li>
             ))}
          </ul>

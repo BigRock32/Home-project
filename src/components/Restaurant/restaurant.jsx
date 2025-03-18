@@ -3,7 +3,7 @@ import { Menu } from '../Menu'
 import { Reviews } from '../Reviews'
 
 export const Restaurant = ({ restaurant }) => {
-   const { id, name, menu, reviews } = restaurant
+   const { name, menu, reviews } = restaurant
 
    return (
       <div className='restaurants__item'>
