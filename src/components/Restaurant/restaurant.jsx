@@ -15,6 +15,23 @@ export const Restaurant = ({ restaurant }) => {
          {reviews.length > 0 ? <Reviews reviews={reviews} /> : 'Отзывы отсутствуют'}
 
          <div className="divider" />
+
+         <h2>{name}</h2>
+
+         {menu.length > 0 ? <Menu menu={menu} /> : 'Блюда отсутствуют'}
+
+         {reviews.length > 0 ? <Reviews reviews={reviews} /> : 'Отзывы отсутствуют'}
+
+         <div className="divider" />
+
+         <h2>{name}</h2>
+
+         {menu.length > 0 ? <Menu menu={menu} /> : 'Блюда отсутствуют'}
+
+         {reviews.length > 0 ? <Reviews reviews={reviews} /> : 'Отзывы отсутствуют'}
+
+         <div className="divider" />
       </div>
+      
    )
 }

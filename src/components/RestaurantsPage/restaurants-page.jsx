@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 
 import { Restaurant } from '../Restaurant'
 import { RestaurantsFilters } from '../RestaurantsFilters'
@@ -8,7 +8,9 @@ import { restaurants } from '../../materials/mock';
 
 export const RestaurantsPage = () => {
    const [activeRestaurantId, setActiveRestaurantId] = useState(restaurants[0].id);
-   const activeRestaurant = restaurants.find((restaurant) => restaurant.id === activeRestaurantId);
+   const activeRestaurant = useMemo(() => {
+      return restaurants.find((restaurant) => restaurant.id === activeRestaurantId);
+   }, [activeRestaurantId])
 
    return (
       <>
