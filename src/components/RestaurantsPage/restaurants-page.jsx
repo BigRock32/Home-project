@@ -8,9 +8,7 @@ import { restaurants } from '../../materials/mock';
 
 export const RestaurantsPage = () => {
    const [activeRestaurantId, setActiveRestaurantId] = useState(restaurants[0].id);
-   const activeRestaurant = useMemo(() => {
-      return restaurants.find((restaurant) => restaurant.id === activeRestaurantId);
-   }, [activeRestaurantId])
+   const activeRestaurant = restaurants.find((restaurant) => restaurant.id === activeRestaurantId);
 
    return (
       <>
