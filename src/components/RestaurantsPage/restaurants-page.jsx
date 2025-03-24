@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 
 import { Restaurant } from '../Restaurant'
 import { RestaurantsFilters } from '../RestaurantsFilters'

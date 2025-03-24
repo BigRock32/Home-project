@@ -7,7 +7,6 @@ export const Restaurant = ({ restaurant }) => {
 
    return (
       <div className='restaurants__item'>
-
          <h2>{name}</h2>
 
          {menu.length > 0 ? <Menu menu={menu} /> : 'Блюда отсутствуют'}
@@ -16,5 +15,6 @@ export const Restaurant = ({ restaurant }) => {
 
          <div className="divider" />
       </div>
+
    )
 }
