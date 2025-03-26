@@ -1,21 +1,21 @@
 import React from 'react'
-import { restaurants } from '../../materials/mock'
+import { restaurants } from '../../constants/mock'
 
+import s from './restaurants-filters.module.scss'
+import { Tab } from '../Tab'
 
 export const RestaurantsFilters = ({ activeRestaurantId, setActiveRestaurantId }) => {
 
   return (
-    <div className='filters'>
+    <div className={s.filters}>
       {restaurants.map(({ id, name }) => (
-        <div
+        <Tab
           key={id}
-          className={`filters__item
-            ${activeRestaurantId === id ? "filters__item_active" : "filters__item"
-            }`}
-          onClick={() => setActiveRestaurantId(id)}
-        >
-          {name}
-        </div>
+          id={id}
+          name={name}
+          activeTab={activeRestaurantId}
+          setActiveTab={setActiveRestaurantId}
+        ></Tab>
       ))}
     </div>
   )
