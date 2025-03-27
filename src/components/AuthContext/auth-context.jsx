@@ -1,15 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import { AuthContext as AuthContextProvider } from '.'
 
 import { userData } from '../../constants/auth'
+import { useAuth } from '../../hooks/use-auth'
 
 export const AuthContext = ({ children }) => {
-   const [auth, setAuth] = useState(false)
-   const [user, setUser] = useState({})
+   const { state, setAuth, setUser } = useAuth()
+   const { auth, user } = state
 
    const toggleAuth = () => {
-      if (auth) {
+      if (state.auth) {
          setAuth(false)
          setUser({})
       } else {

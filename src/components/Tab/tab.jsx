@@ -3,7 +3,6 @@ import React, { use, useContext } from 'react'
 import s from './tab.module.scss'
 import classNames from 'classnames'
 import { ThemeContext } from '../ThemeContext'
-import { Button } from '../Button/button'
 
 export const Tab = ({
    id,

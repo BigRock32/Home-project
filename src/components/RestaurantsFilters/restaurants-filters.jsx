@@ -15,7 +15,7 @@ export const RestaurantsFilters = ({ activeRestaurantId, setActiveRestaurantId }
           name={name}
           activeTab={activeRestaurantId}
           setActiveTab={setActiveRestaurantId}
-        ></Tab>
+        />
       ))}
     </div>
   )

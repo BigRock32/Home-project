@@ -1,10 +1,8 @@
-.footer {
-   &__wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid black;
-      border-radius: 10px;
-      padding: 20px;
-   }
+.footer__wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid black;
+   border-radius: 0.7rem;
+   padding: 1.25rem;
 }
