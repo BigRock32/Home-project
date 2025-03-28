@@ -3,9 +3,9 @@ import s from './footer.module.scss'
 
 export const Footer = () => {
    return (
-      <footer className={s.footer}>
+      <footer>
          <div className="container">
-            <div className={s.footer__wrapper}>
+            <div className={s.footerWrapper}>
                Footer
             </div>
          </div>

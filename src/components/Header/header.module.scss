@@ -1,4 +1,4 @@
-.header__wrapper {
+.headerWrapper {
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -7,7 +7,7 @@
    padding: 1.25rem;
 }
 
-.header__right {
+.headerRight {
    display: flex;
    gap: 1.25rem;
    align-items: center;

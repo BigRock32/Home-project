@@ -1,4 +1,5 @@
 import { useReducer } from 'react'
+import { userData } from '../../constants/auth'
 
 const DEFAULT_AUTH_STATE = {
    auth: false,
@@ -23,12 +24,19 @@ const reducer = (state, { type, payload }) => {
 export const useAuth = () => {
    const [state, dispatch] = useReducer(reducer, DEFAULT_AUTH_STATE)
 
-   const setAuth = (auth) => dispatch({ type: SET_AUTH_ACTION, payload: auth })
-   const setUser = (user) => dispatch({ type: SET_USER_ACTION, payload: user })
+   const login = () => {
+      dispatch({ type: SET_AUTH_ACTION, payload: true })
+      dispatch({ type: SET_USER_ACTION, payload: userData })
+   }
+
+   const logout = () => {
+      dispatch({ type: SET_AUTH_ACTION, payload: false })
+      dispatch({ type: SET_USER_ACTION, payload: {} })
+   }
 
    return {
       state,
-      setAuth,
-      setUser
+      login,
+      logout
    }
 }

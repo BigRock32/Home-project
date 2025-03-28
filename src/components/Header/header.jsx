@@ -5,11 +5,11 @@ import { HeaderAuth } from '../HeaderAuth'
 
 export const Header = () => {
    return (
-      <header className={s.header}>
+      <header>
          <div className="container">
-            <div className={s.header__wrapper}>
+            <div className={s.headerWrapper}>
                Header
-               <div className={s.header__right}>
+               <div className={s.headerRight}>
                   <ToggleTheme />
                   <HeaderAuth />
                </div>
