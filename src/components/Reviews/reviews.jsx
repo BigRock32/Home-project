@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { use } from 'react'
 import { ReviewForm } from '../ReviewForm'
+import { AuthContext } from '../AuthContext'
 
 export const Reviews = ({ reviews }) => {
+   const { auth } = use(AuthContext)
+
    return (
       <>
          <h3>Отзывы</h3>
@@ -14,7 +17,7 @@ export const Reviews = ({ reviews }) => {
             ))}
          </ul>
 
-         <ReviewForm />
+         {auth && <ReviewForm />}
       </>
    )
 }

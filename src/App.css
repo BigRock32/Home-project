@@ -1,1 +1,51 @@
+textarea {
+   resize: vertical;
+}
+
+a {
+   text-underline-offset: 0.25rem;
+}
+
+/* Remove blue box from links and dropdown on tap on mobile */
+html {
+   \-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Make text look crisper and more legible in all browsers */
+body {
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   font-smoothing: antialiased;
+   text-rendering: optimizeLegibility;
+   font-family: sans-serif;
+}
+
+/* Fluid responsive */
+html {
+   font-size: calc(16 * (100vw / 1440));
+}
+
+@media (max-width: 479px) {
+   html {
+      font-size: calc(16 * (100vw / 360));
+   }
+}
+
+@media (min-width: 1600px) {
+   html {
+      font-size: 16px;
+   }
+}
+
+/* Section */
+.section {
+   padding: 40px 0;
+}
+
+/* Container */
+.container {
+   width: 100%;
+   max-width: 80rem;
+   margin: 0 auto;
+}
 

@@ -1,0 +1,28 @@
+.tab {
+   padding: 0.7rem 1.25rem;
+   border: 1px solid black;
+   border-radius: 0.7rem;
+   cursor: pointer;
+}
+
+.dark {
+   background-color: black;
+   color: white;
+}
+
+.active {
+   background-color: black;
+   color: white;
+   font-weight: 700;
+   border-width: 2px;
+
+   &.dark {
+      background-color: white;
+      color: black;
+   }
+
+   &.light {
+      background-color: black;
+      color: white;
+   }
+}
