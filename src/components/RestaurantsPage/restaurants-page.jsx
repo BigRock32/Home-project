@@ -3,7 +3,7 @@ import React, { useMemo } from 'react'
 import { Restaurant } from '../Restaurant'
 import { RestaurantsFilters } from '../RestaurantsFilters'
 import { useState } from 'react';
-import { restaurants } from '../../materials/mock';
+import { restaurants } from '../../constants/mock';
 
 
 export const RestaurantsPage = () => {
