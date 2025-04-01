@@ -1,21 +1,22 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 
-import { Restaurant } from '../Restaurant'
 import { RestaurantsFilters } from '../RestaurantsFilters'
 import { useState } from 'react';
-import { restaurants } from '../../constants/mock';
+import { useSelector } from 'react-redux';
+import { selectRestaurantsIds } from '../../redux/entities/restaurant/slice';
+import { RestaurantContainer } from '../Restaurant';
 
 
 export const RestaurantsPage = () => {
-   const [activeRestaurantId, setActiveRestaurantId] = useState(restaurants[0].id);
-   const activeRestaurant = restaurants.find((restaurant) => restaurant.id === activeRestaurantId);
+   const restaurantsIds = useSelector(selectRestaurantsIds)
+   const [activeRestaurantId, setActiveRestaurantId] = useState(restaurantsIds[0]);
 
    return (
       <>
-         <RestaurantsFilters activeRestaurantId={activeRestaurantId} setActiveRestaurantId={setActiveRestaurantId} />
+         <RestaurantsFilters restaurantsIds={restaurantsIds} activeRestaurantId={activeRestaurantId} setActiveRestaurantId={setActiveRestaurantId} />
          {
-            activeRestaurant && (
-               <Restaurant restaurant={activeRestaurant} />
+            activeRestaurantId && (
+               <RestaurantContainer id={activeRestaurantId} />
             )
          }
       </>

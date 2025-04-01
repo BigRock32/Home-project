@@ -1,4 +1,4 @@
-import React, { use, useContext } from 'react'
+import React, { use } from 'react'
 
 import s from './tab.module.scss'
 import classNames from 'classnames'
