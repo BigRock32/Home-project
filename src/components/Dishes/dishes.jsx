@@ -10,7 +10,9 @@ export const Dishes = ({ dishesIds }) => {
          <h3>Меню</h3>
          <ul className={s.menu}>
             {dishesIds.map((dishId) => (
-               <DishContainer key={dishId} id={dishId} />
+               <li key={dishId} >
+                  <DishContainer id={dishId} />
+               </li>
             ))}
          </ul>
       </>

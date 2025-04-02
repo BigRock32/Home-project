@@ -7,9 +7,9 @@ export const Dish = ({ name, id }) => {
    const { auth } = use(AuthContext)
 
    return (
-      <li>
+      <>
          {name}
          {auth && <DishCounter id={id}  />}
-      </li>
+      </>
    )
 }

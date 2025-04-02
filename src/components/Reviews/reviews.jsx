@@ -11,7 +11,9 @@ export const Reviews = ({ reviewsIds }) => {
          <h3>Отзывы</h3>
          <ul>
             {reviewsIds.map((reviewId) => (
-               <ReviewContainer key={reviewId} id={reviewId} />
+               <li key={reviewId}>
+                  <ReviewContainer id={reviewId} />
+               </li>
             ))}
          </ul>
 
