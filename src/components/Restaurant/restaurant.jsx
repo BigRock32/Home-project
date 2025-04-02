@@ -1,20 +1,19 @@
 import React from 'react'
-import { Menu } from '../Menu'
+import { Dishes } from '../Dishes'
 import { Reviews } from '../Reviews'
 
 import s from './restaurant.module.scss'
 import { Divider } from '../Divider'
 
-export const Restaurant = ({ restaurant }) => {
-   const { name, menu, reviews } = restaurant
+export const Restaurant = ({ name, dishesIds, reviewsIds }) => {
 
    return (
       <div className={s.restaurant}>
          <h2>{name}</h2>
 
-         {menu.length > 0 ? <Menu menu={menu} /> : 'Блюда отсутствуют'}
+         {dishesIds.length > 0 ? <Dishes dishesIds={dishesIds} /> : 'Блюда отсутствуют'}
 
-         {reviews.length > 0 ? <Reviews reviews={reviews} /> : 'Отзывы отсутствуют'}
+         {reviewsIds.length > 0 ? <Reviews reviewsIds={reviewsIds} /> : 'Отзывы отсутствуют'}
 
          <Divider />
       </div>

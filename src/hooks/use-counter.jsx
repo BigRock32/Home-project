@@ -1,21 +1,17 @@
-import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { addToCart, removeFromCart, selectAmountByRestaurantId } from '../redux/entities/cart/slice'
 
-const max = 5
-const min = 0
+export const useCounter = (id) => {
+   const dispatch = useDispatch()
 
-export const useCounter = () => {
-   const [counterValue, setCounterValue] = useState(min)
+   const counterValue = useSelector((state) => selectAmountByRestaurantId(state, id)) || 0
 
    const incrementCounter = () => {
-      if (counterValue < max) {
-         setCounterValue(counterValue + 1)
-      }
+      dispatch(addToCart(id)), [dispatch, id]
    }
 
    const decrementCounter = () => {
-      if (counterValue > min) {
-         setCounterValue(counterValue - 1)
-      }
+      dispatch(removeFromCart(id)), [dispatch, id]
    }
 
    return {

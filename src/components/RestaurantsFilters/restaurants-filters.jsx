@@ -1,18 +1,15 @@
 import React from 'react'
-import { restaurants } from '../../constants/mock'
 
 import s from './restaurants-filters.module.scss'
-import { Tab } from '../Tab'
+import { RestaurantTabContainer } from '../RestaurantTab'
 
-export const RestaurantsFilters = ({ activeRestaurantId, setActiveRestaurantId }) => {
+export const RestaurantsFilters = ({ restaurantsIds, activeRestaurantId, setActiveRestaurantId }) => {
 
   return (
     <div className={s.filters}>
-      {restaurants.map(({ id, name }) => (
-        <Tab
-          key={id}
-          id={id}
-          name={name}
+      {restaurantsIds.map((restaurantsId) => (
+        <RestaurantTabContainer
+          key={restaurantsId} id={restaurantsId}
           activeTab={activeRestaurantId}
           setActiveTab={setActiveRestaurantId}
         />
