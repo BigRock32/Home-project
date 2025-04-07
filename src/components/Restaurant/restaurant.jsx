@@ -4,16 +4,23 @@ import { Reviews } from '../Reviews'
 
 import s from './restaurant.module.scss'
 import { Divider } from '../Divider'
+import { Outlet } from 'react-router'
+import { Tabs } from '../Tabs/tabs'
+import { Tab } from '../Tab'
 
-export const Restaurant = ({ name, dishesIds, reviewsIds }) => {
+export const Restaurant = ({ name }) => {
+
 
    return (
       <div className={s.restaurant}>
          <h2>{name}</h2>
 
-         {dishesIds.length > 0 ? <Dishes dishesIds={dishesIds} /> : 'Блюда отсутствуют'}
+         <Tabs>
+            <Tab to='menu' name='Меню' />
+            <Tab to='reviews' name='Отзывы' />
+         </Tabs>
 
-         {reviewsIds.length > 0 ? <Reviews reviewsIds={reviewsIds} /> : 'Отзывы отсутствуют'}
+         <Outlet />
 
          <Divider />
       </div>
