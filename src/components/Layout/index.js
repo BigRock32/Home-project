@@ -1,3 +1,2 @@
-import { Layout } from './Layout.jsx'
 
-export { Layout }
+export { Layout } from './layout.jsx'
