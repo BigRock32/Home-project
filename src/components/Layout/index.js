@@ -1,2 +1,2 @@
 
-export { Layout } from './layout.jsx'
+export { Layout } from './layout'
