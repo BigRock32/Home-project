@@ -1,17 +1,22 @@
 import React from 'react'
+import { DishListItemContainer } from '../DishListItem';
 
 import s from './menu.module.scss'
-import { DishContainer } from '../Dish'
+import { useSelector } from 'react-redux'
+import { selectRestaurantById } from '../../redux/entities/restaurant/slice'
 
-export const Dishes = ({ dishesIds }) => {
+export const Dishes = ({ id }) => {
+   const restaurant = useSelector((state) => selectRestaurantById(state, id))
+
+   const { menu } = restaurant
 
    return (
       <>
          <h3>Меню</h3>
          <ul className={s.menu}>
-            {dishesIds.map((dishId) => (
+            {menu.map((dishId) => (
                <li key={dishId} >
-                  <DishContainer id={dishId} />
+                  <DishListItemContainer id={dishId} />
                </li>
             ))}
          </ul>
