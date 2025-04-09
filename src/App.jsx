@@ -13,13 +13,6 @@ import { NotFoundPage } from './pages/NotFoundPage/not-found-page';
 import { MenuPage } from './pages/MenuPage/menu-page';
 import { ReviewsPage } from './pages/ReviewsPage/reviews-page';
 import { DishPage } from './pages/DishPage/dish-page';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
-import { HomePage } from './pages/HomePage/home-page';
-import { RestaurantPage } from './pages/RestaurantPage/restaurant-page';
-import { NotFoundPage } from './pages/NotFoundPage/not-found-page';
-import { MenuPage } from './pages/MenuPage/menu-page';
-import { ReviewsPage } from './pages/ReviewsPage/reviews-page';
-import { DishPage } from './pages/DishPage/dish-page';
 
 function App() {
   return (
