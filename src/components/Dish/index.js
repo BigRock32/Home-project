@@ -1,2 +1,2 @@
-export { DishContainer } from './dish-container.jsx'
-export { Dish } from './dish.jsx'
+export { DishContainer } from './dish-container'
+export { Dish } from './dish'

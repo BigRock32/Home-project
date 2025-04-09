@@ -4,8 +4,6 @@ textarea {
 
 a {
    text-underline-offset: 0.25rem;
-   text-decoration: none;
-   color: inherit;
 }
 
 /* Remove blue box from links and dropdown on tap on mobile */
