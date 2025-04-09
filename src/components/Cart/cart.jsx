@@ -1,13 +1,19 @@
 import React from 'react'
 import { CartItemContainer } from '../CartItem/cart-item-container'
+import { Divider } from '../Divider'
 
-export const Cart = ({ items }) => {
+export const Cart = ({ itemsIds }) => {
 
    return (
-      <ul>
-         {items.map(({ id, amount }) => (
-            <CartItemContainer key={id} id={id} amount={amount} />
-         ))}
-      </ul>
+      <>
+         <Divider />
+         <h4>Корзина:</h4>
+
+         <ul>
+            {itemsIds.map((id) => (
+               <CartItemContainer key={id} id={id} />
+            ))}
+         </ul>
+      </>
    )
 }

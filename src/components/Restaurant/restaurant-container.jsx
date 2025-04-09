@@ -6,13 +6,13 @@ import { Restaurant } from './restaurant'
 export const RestaurantContainer = ({ id }) => {
    const restaurant = useSelector((state) => selectRestaurantById(state, id))
 
-   const { name, menu, reviews } = restaurant
+   const { name, reviews } = restaurant
 
    if (!restaurant) {
       return null
    }
 
    return (
-      <Restaurant name={name} dishesIds={menu} reviewsIds={reviews} />
+      <Restaurant name={name} reviewsIds={reviews} />
    )
 }

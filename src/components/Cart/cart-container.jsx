@@ -1,16 +1,16 @@
 import React from 'react'
 import { Cart } from './cart'
 import { useSelector } from 'react-redux'
-import { selectCartItems } from '../../redux/entities/cart/slice'
+import { selectCartItemsIds } from '../../redux/entities/cart/slice'
 
 export const CartContainer = () => {
-   const items = useSelector(selectCartItems)
+   const itemsIds = useSelector(selectCartItemsIds)
 
-   if (!items.length) {
+   if (!itemsIds.length) {
       return null
    }
 
    return (
-      <Cart items={items} />
+      <Cart itemsIds={itemsIds} />
    )
 }
