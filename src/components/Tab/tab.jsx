@@ -3,25 +3,23 @@ import React, { use } from 'react'
 import s from './tab.module.scss'
 import classNames from 'classnames'
 import { ThemeContext } from '../ThemeContext'
+import { NavLink } from 'react-router'
 
 export const Tab = ({
-   id,
-   name,
-   activeTab,
-   setActiveTab
+   to,
+   name
 }) => {
    const { theme } = use(ThemeContext)
 
    return (
-      <div
-         className={classNames(s.tab, {
-            [s.active]: activeTab === id,
+      <NavLink to={to}
+         className={({ isActive }) => classNames(s.tab, {
+            [s.active]: isActive,
             [s.dark]: theme === "dark",
             [s.light]: theme === "light",
          })}
-         onClick={() => setActiveTab(id)}
       >
          {name}
-      </div>
+      </NavLink>
    )
 }
