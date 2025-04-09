@@ -30,9 +30,7 @@ function App() {
                     <Route path='reviews' element={<ReviewsPage />} />
                   </Route>
                 </Route>
-                <Route path='/dish' >
-                  <Route path=':dishId' element={<DishPage />} />
-                </Route>
+                <Route path='/dish/:dishId' element={<DishPage />} />
               </Route>
               <Route path='*' element={<NotFoundPage />} />
             </Routes>
