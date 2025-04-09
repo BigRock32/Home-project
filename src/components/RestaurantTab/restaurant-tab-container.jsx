@@ -3,7 +3,7 @@ import { Tab } from '../Tab'
 import { selectRestaurantById } from '../../redux/entities/restaurant/slice'
 import { useSelector } from 'react-redux'
 
-export const RestaurantTabContainer = ({ id }) => {
+export const RestaurantTabContainer = ({ id, activeTab, setActiveTab }) => {
    const restaurant = useSelector((state) => selectRestaurantById(state, id))
 
    if (!restaurant) {
@@ -14,8 +14,10 @@ export const RestaurantTabContainer = ({ id }) => {
 
    return (
       <Tab
-         to={id}
+         id={id}
          name={name}
+         activeTab={activeTab}
+         setActiveTab={setActiveTab}
       />
    )
 }
