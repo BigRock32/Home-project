@@ -1,5 +1,18 @@
 .filters {
    display: flex;
-   gap: 30px;
-   margin-bottom: 20px;
+   gap: 2rem;
+   margin-bottom: 1.25rem;
+}
+
+.skeletons {
+   display: flex;
+   gap: 2rem;
+   margin-bottom: 1.25rem;
+}
+
+.skeleton {
+   background-color: rgba(147, 147, 147, 0.25);
+   height: 3rem;
+   width: 8rem;
+   border-radius: 0.7rem;
 }

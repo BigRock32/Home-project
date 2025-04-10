@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { RestaurantsFilters } from '../../components/RestaurantsFilters'
+import { RestaurantsFilters, RestaurantsFiltersSkeletons } from '../../components/RestaurantsFilters'
 import { useSelector } from 'react-redux';
 import { selectRestaurantsIds } from '../../redux/entities/restaurants/slice';
 import { Outlet } from 'react-router';
@@ -12,8 +12,6 @@ import { useRequest } from '../../redux/hooks/use-request';
 export const RestaurantsPage = () => {
    const requestStatus = useRequest(getRestaurants)
 
-   console.log(requestStatus);
-
    const restaurantsIds = useSelector(selectRestaurantsIds)
 
    const isLoading =
@@ -23,7 +21,7 @@ export const RestaurantsPage = () => {
       requestStatus === 'rejected'
 
    if (isLoading) {
-      return 'Рестораны скоро появятся...'
+      return <RestaurantsFiltersSkeletons quantity={[1, 2, 3, 4]} />
    }
 
    if (isError) {
