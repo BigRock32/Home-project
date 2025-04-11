@@ -39,6 +39,12 @@ html {
    }
 }
 
+/* Variables */
+
+:root {
+   --grey-20: rgba(159, 159, 159, 0.2);
+}
+
 /* Section */
 .section {
    padding: 40px 0;

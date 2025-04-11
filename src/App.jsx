@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import './App.css'
 import { AuthContext } from './components/AuthContext/auth-context';
 import { Layout } from './components/Layout'
-import { RestaurantsPage } from './components/RestaurantsPage';
+import { RestaurantsPage } from './pages/RestaurantsPage';
 import { ThemeContext } from './components/ThemeContext/theme-context';
 import { store } from './redux/store';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router';

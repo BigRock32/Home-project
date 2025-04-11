@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { DishListItem } from './dish-list-item';
 
 export const DishListItemContainer = ({ id }) => {
-   const dish = useSelector((state) => selectDishById(state, id));
+   const dish = useSelector((state) => selectDishById(state, id))
    
    const { name } = dish
 

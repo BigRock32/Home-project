@@ -32,6 +32,12 @@ export const { addToCart, removeFromCart } = cartSlice.actions
 
 const selectCartSlice = (state) => state.cart;
 
-export const selectCartItemsIds = createSelector([selectCartSlice], (cart) =>
-   Object.keys(cart)
+export const selectCartItemsIds = createSelector(
+   [selectCartSlice],
+   (cart) => Object.keys(cart)
+)
+
+export const selectTotalItemsInCart = createSelector(
+   [selectCartSlice],
+   (cart) => Object.values(cart).reduce((total, quantity) => total + quantity, 0)
 )

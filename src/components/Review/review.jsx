@@ -1,9 +1,12 @@
 import React from 'react'
+import { UserContainer } from '../User'
 
-export const Review = ({ name, text }) => {
+export const Review = ({ userId, text }) => {
    return (
       <>
-         <h4>{name}</h4>
+         <h4>
+            <UserContainer id={userId} />
+         </h4>
          {text}
       </>
    )

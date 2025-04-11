@@ -1,6 +1,6 @@
 import React from 'react'
 import { Tab } from '../Tab'
-import { selectRestaurantById } from '../../redux/entities/restaurant/slice'
+import { selectRestaurantById } from '../../redux/entities/restaurants/slice'
 import { useSelector } from 'react-redux'
 
 export const RestaurantTabContainer = ({ id }) => {
