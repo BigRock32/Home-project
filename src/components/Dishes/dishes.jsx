@@ -1,9 +1,7 @@
 import React from 'react'
 import { DishListItemContainer } from '../DishListItem';
 
-import s from './menu.module.scss'
-import { useSelector } from 'react-redux'
-import { selectRestaurantById } from '../../redux/entities/restaurants/slice'
+import s from './dishes.module.scss'
 
 export const Dishes = ({ dishesIds }) => {
 

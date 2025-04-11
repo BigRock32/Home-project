@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Reviews } from '../../components/Reviews'
+import { Reviews, ReviewsSkeletons } from '../../components/Reviews'
 import { useParams } from 'react-router'
 import { useSelector } from 'react-redux'
 import { selectReviewsIds } from '../../redux/entities/reviews/slice'
@@ -29,7 +29,7 @@ export const ReviewsPage = () => {
    const isError = reviewsStatus === 'rejected' || usersStatus === 'rejected'
 
    if (isLoading) {
-      return 'Отзывы скоро появятся...'
+      return <ReviewsSkeletons quantity={[1, 2, 3, 4]} />
    }
 
    if (isError) {

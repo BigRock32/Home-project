@@ -2,6 +2,7 @@ import React, { use } from 'react'
 import { AuthContext } from '../AuthContext'
 
 import s from './header-auth.module.scss'
+import { CartMenuItem } from '../CartMenuItem'
 
 export const HeaderAuth = () => {
    const { auth, user, login, logout } = use(AuthContext)
@@ -14,6 +15,7 @@ export const HeaderAuth = () => {
          {auth && <div>
             {user.name}
          </div>}
+         {auth && <CartMenuItem />}
       </>
    )
 }

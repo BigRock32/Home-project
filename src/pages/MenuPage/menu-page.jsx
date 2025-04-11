@@ -1,5 +1,5 @@
 import React from 'react'
-import { Dishes } from '../../components/Dishes'
+import { Dishes, DishesSkeletons } from '../../components/Dishes'
 import { useParams } from 'react-router'
 import { useRequest } from '../../redux/hooks/use-request'
 import { getDishes } from '../../redux/entities/dishes/get-dishes'
@@ -24,7 +24,7 @@ export const MenuPage = () => {
 
 
    if (isLoading) {
-      return 'Меню скоро появится...'
+      return <DishesSkeletons quantity={[1, 2, 3, 4]} />
    }
 
    if (isError) {
