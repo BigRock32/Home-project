@@ -1,10 +1,10 @@
 import React from 'react'
 import cart from '../../assets/cart.svg'
-import s from './cart-menu-item.module.scss'
+import s from './cart-total.module.scss'
 import { selectTotalItemsInCart } from '../../redux/entities/cart/slice'
 import { useSelector } from 'react-redux'
 
-export const CartMenuItem = () => {
+export const CartTotal = () => {
    const total = useSelector(selectTotalItemsInCart)
 
    return (

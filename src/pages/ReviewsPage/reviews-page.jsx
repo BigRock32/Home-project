@@ -12,7 +12,7 @@ export const ReviewsPage = () => {
    const { restaurantId } = useParams()
 
    const reviewsStatus = useRequest(
-      restaurantId ? getReviews : null,
+      getReviews,
       restaurantId
    )
 
@@ -29,7 +29,7 @@ export const ReviewsPage = () => {
    const isError = reviewsStatus === 'rejected' || usersStatus === 'rejected'
 
    if (isLoading) {
-      return <ReviewsSkeletons quantity={[1, 2, 3, 4]} />
+      return <ReviewsSkeletons quantity={4} />
    }
 
    if (isError) {

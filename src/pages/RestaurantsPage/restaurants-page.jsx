@@ -21,7 +21,7 @@ export const RestaurantsPage = () => {
       requestStatus === 'rejected'
 
    if (isLoading) {
-      return <RestaurantsFiltersSkeletons quantity={[1, 2, 3, 4]} />
+      return <RestaurantsFiltersSkeletons quantity={4} />
    }
 
    if (isError) {

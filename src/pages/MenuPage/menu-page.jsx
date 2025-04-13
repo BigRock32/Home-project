@@ -10,7 +10,7 @@ export const MenuPage = () => {
    const { restaurantId } = useParams()
 
    const requestStatus = useRequest(
-      restaurantId ? getDishes : null,
+      getDishes,
       restaurantId
    )
 
@@ -24,7 +24,7 @@ export const MenuPage = () => {
 
 
    if (isLoading) {
-      return <DishesSkeletons quantity={[1, 2, 3, 4]} />
+      return <DishesSkeletons quantity={4} />
    }
 
    if (isError) {
