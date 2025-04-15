@@ -1,12 +1,20 @@
 import React from 'react'
 import { Dish } from './dish.jsx'
-import { selectDishById } from '../../redux/entities/dishes/slice.js';
-import { useSelector } from 'react-redux';
+import { useGetDishesByRestaurantIdQuery } from '../../redux/services/api.js'
 
 export const DishContainer = ({ id }) => {
-   const dish = useSelector((state) => selectDishById(state, id))
+   const { data } = useGetDishesByRestaurantIdQuery(undefined, {
+      selectFromResult: (result) => ({
+         ...result,
+         data: result.data?.find(({ id: dishId }) => dishId === id)
+      })
+   })
+
+   if (!data) {
+      return <div>Загрзука блюда</div>
+   }
 
    return (
-      <Dish dish={dish} id={id} />
+      <Dish dish={data} id={id} />
    )
 }

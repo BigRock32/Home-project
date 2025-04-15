@@ -37,11 +37,15 @@ export const useReviewForm = () => {
 
    const setName = (name) => dispatch({ type: SET_NAME_ACTION, payload: name })
    const setText = (text) => dispatch({ type: SET_TEXT_ACTION, payload: text })
+   const setRating = (reviewValue) => dispatch({ type: SET_REVIEW_VALUE_ACTION, payload: reviewValue })
    const setIncrementReview = () => {
       if (reviewValue < MAX_REVIEW_VALUE) {
          dispatch({ type: SET_REVIEW_VALUE_ACTION, payload: reviewValue + 1 })
       }
    }
+
+   console.log(form);
+   
 
    const setDecrementReview = () => {
       if (reviewValue > MIN_REVIEW_VALUE) {
@@ -54,6 +58,7 @@ export const useReviewForm = () => {
       form,
       setName,
       setText,
+      setRating,
       setIncrementReview,
       setDecrementReview,
       setDefaultValue

@@ -1,2 +1,2 @@
-export { ReviewContainer } from './review-container'
+// export { ReviewContainer } from './review-container'
 export { Review } from './review'

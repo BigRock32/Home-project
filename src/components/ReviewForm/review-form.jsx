@@ -1,34 +1,40 @@
-import React from 'react'
+import React, { use } from 'react'
 import { Counter } from '../Counter/counter'
-import { useReviewForm } from '../../hooks/use-review-form'
 
 import s from './review-form.module.scss'
 import { Button } from '../Button/button'
+import { AuthContext } from '../AuthContext'
 
 
-export const ReviewForm = () => {
+export const ReviewForm = ({ onSubmit, isLoading, useReviewForm, title }) => {
+   const { user } = use(AuthContext)
+
    const {
       form,
-      setName,
       setText,
       setIncrementReview,
       setDecrementReview,
       setDefaultValue
-   } = useReviewForm()
+   } = useReviewForm
 
-   const { name, text, reviewValue } = form
+   const { text, reviewValue } = form
 
    return (
       <>
-         <h4>Оставить отзыв</h4>
+         <h4>{title}</h4>
          <form className={s.form}>
             <div>Оцените этот ресторан</div>
             <Counter value={reviewValue} increment={setIncrementReview} decrement={setDecrementReview} />
 
-            <input value={name} onChange={(e) => setName(e.target.value)} className='form__input' type="text" placeholder='имя' />
             <textarea value={text} onChange={(e) => setText(e.target.value)} className='form__input' type="text" placeholder='введите текст' />
          </form>
-         <Button onClick={setDefaultValue}>clear</Button>
+
+         <Button onClick={setDefaultValue}>Очистить</Button>
+         <Button onClick={() => {
+            onSubmit({
+               text, rating: reviewValue, userId: user.id
+            })
+         }}>{isLoading ? 'Подождите..' : 'Отправить'}</Button>
       </>
    )
 }

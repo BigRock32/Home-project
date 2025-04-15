@@ -1,24 +1,30 @@
 import React, { use } from 'react'
 import { ReviewForm } from '../ReviewForm'
 import { AuthContext } from '../AuthContext'
-import { ReviewContainer } from '../Review'
+import { Review } from '../Review'
+import { useReviewForm } from '../../hooks/use-review-form'
 
 
-export const Reviews = ({ reviewsIds }) => {
+export const Reviews = ({ reviewsData, onSubmit, isAddReviewLoading }) => {
    const { auth } = use(AuthContext)
+   const useAddReviewForm = useReviewForm()
 
    return (
       <>
          <h3>Отзывы</h3>
          <ul>
-            {reviewsIds.map((reviewId) => (
-               <li key={reviewId}>
-                  <ReviewContainer id={reviewId} />
+            {reviewsData.map(({ id, text, rating, userId }) => (
+               <li key={id}>
+                  <Review id={id} userId={userId} text={text} rating={rating} />
                </li>
             ))}
          </ul>
 
-         {auth && <ReviewForm />}
+         {auth && <ReviewForm
+            onSubmit={onSubmit}
+            isAddReviewLoading={isAddReviewLoading}
+            useReviewForm={useAddReviewForm}
+            title={'Оставить отзыв'} />}
       </>
    )
 }

@@ -2,42 +2,30 @@ import React from 'react'
 
 import { Reviews, ReviewsSkeletons } from '../../components/Reviews'
 import { useParams } from 'react-router'
-import { useSelector } from 'react-redux'
-import { selectReviewsIds } from '../../redux/entities/reviews/slice'
-import { getReviews } from '../../redux/entities/reviews/get-reviews'
-import { useRequest } from '../../redux/hooks/use-request'
-import { getUsers } from '../../redux/entities/users/get-users'
+import { useAddReviewMutation, useGetReviewsByRestaurantIdQuery, useGetUsersQuery } from '../../redux/services/api'
 
 export const ReviewsPage = () => {
    const { restaurantId } = useParams()
 
-   const reviewsStatus = useRequest(
-      getReviews,
-      restaurantId
-   )
+   const { isLoading: isUsersLoading, isError: isUsersError } = useGetUsersQuery(restaurantId)
 
-   const usersStatus = useRequest(getUsers)
+   const { data, isFetching: isReviewsLoading, isError: isReviewsError } = useGetReviewsByRestaurantIdQuery(restaurantId)
 
-   const reviewsIds = useSelector(selectReviewsIds)
+   const [addReview, { isLoading: isAddReviewLoading }] = useAddReviewMutation()
+   const handleSubmit = (review) => {
+      addReview({ restaurantId, review })
+   }
 
-   const isLoading =
-      reviewsStatus === 'idle' ||
-      reviewsStatus === 'pending' ||
-      usersStatus === 'idle' ||
-      usersStatus === 'pending'
-
-   const isError = reviewsStatus === 'rejected' || usersStatus === 'rejected'
-
-   if (isLoading) {
+   if (isReviewsLoading || isUsersLoading) {
       return <ReviewsSkeletons quantity={4} />
    }
 
-   if (isError) {
+   if (isReviewsError || isUsersError) {
       return 'Ошибка! Отзывы не появятся.'
    }
 
 
    return (
-      <Reviews reviewsIds={reviewsIds} />
+      <Reviews reviewsData={data} onSubmit={handleSubmit} isAddReviewLoading={isAddReviewLoading} />
    )
 }
