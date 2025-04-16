@@ -3,13 +3,13 @@ import React from 'react'
 import s from './restaurants-filters.module.scss'
 import { RestaurantTabContainer } from '../RestaurantTab'
 
-export const RestaurantsFilters = ({ restaurantsIds }) => {
+export const RestaurantsFilters = ({ restaurantsData }) => {
 
   return (
     <div className={s.filters}>
-      {restaurantsIds.map((restaurantsId) => (
+      {restaurantsData.map(({ id, name }) => (
         <RestaurantTabContainer
-          key={restaurantsId} id={restaurantsId}
+          key={id} id={id} name={name}
         />
       ))}
     </div>

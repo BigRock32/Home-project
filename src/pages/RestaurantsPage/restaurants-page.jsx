@@ -1,24 +1,13 @@
 import React from 'react'
 
 import { RestaurantsFilters, RestaurantsFiltersSkeletons } from '../../components/RestaurantsFilters'
-import { useSelector } from 'react-redux';
-import { selectRestaurantsIds } from '../../redux/entities/restaurants/slice';
 import { Outlet } from 'react-router';
 
-import { getRestaurants } from '../../redux/entities/restaurants/get-restaurants'
-import { useRequest } from '../../redux/hooks/use-request';
+import { useGetRestaurantsQuery } from '../../redux/services/api';
 
 
 export const RestaurantsPage = () => {
-   const requestStatus = useRequest(getRestaurants)
-
-   const restaurantsIds = useSelector(selectRestaurantsIds)
-
-   const isLoading =
-      requestStatus === 'idle' || requestStatus === 'pending'
-
-   const isError =
-      requestStatus === 'rejected'
+   const { data, isLoading, isError } = useGetRestaurantsQuery()
 
    if (isLoading) {
       return <RestaurantsFiltersSkeletons quantity={4} />
@@ -30,7 +19,7 @@ export const RestaurantsPage = () => {
 
    return (
       <>
-         <RestaurantsFilters restaurantsIds={restaurantsIds} />
+         <RestaurantsFilters restaurantsData={data} />
          <Outlet />
       </>
    )
