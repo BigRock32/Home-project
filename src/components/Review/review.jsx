@@ -9,10 +9,7 @@ import { useReviewForm } from '../../hooks/use-review-form'
 import s from './review.module.scss'
 
 export const Review = ({ id, userId, text, rating }) => {
-   const useUpdateReviewForm = useReviewForm()
-
    const { auth, user } = use(AuthContext)
-   const { setText, setRating, setDefaultValue } = useUpdateReviewForm
 
    const [showForm, setShowForm] = useState(false)
 
@@ -24,11 +21,8 @@ export const Review = ({ id, userId, text, rating }) => {
 
    const handleClick = () => {
       if (!showForm) {
-         setText(text)
-         setRating(rating)
          setShowForm(true)
       } else {
-         setDefaultValue()
          setShowForm(false)
       }
 
@@ -50,8 +44,8 @@ export const Review = ({ id, userId, text, rating }) => {
             <ReviewForm
                onSubmit={handleSubmit}
                isLoading={isUpdateReviewLoading}
-               useReviewForm={useUpdateReviewForm}
-               title={'Отредактировать отзыв'}
+               title='Отредактировать отзыв'
+               initialData={{ text, rating }}
             />}
       </>
    )

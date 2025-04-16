@@ -2,12 +2,10 @@ import React, { use } from 'react'
 import { ReviewForm } from '../ReviewForm'
 import { AuthContext } from '../AuthContext'
 import { Review } from '../Review'
-import { useReviewForm } from '../../hooks/use-review-form'
 
 
 export const Reviews = ({ reviewsData, onSubmit, isAddReviewLoading }) => {
    const { auth } = use(AuthContext)
-   const useAddReviewForm = useReviewForm()
 
    return (
       <>
@@ -22,9 +20,9 @@ export const Reviews = ({ reviewsData, onSubmit, isAddReviewLoading }) => {
 
          {auth && <ReviewForm
             onSubmit={onSubmit}
-            isAddReviewLoading={isAddReviewLoading}
-            useReviewForm={useAddReviewForm}
-            title={'Оставить отзыв'} />}
+            isLoading={isAddReviewLoading}
+            title={'Оставить отзыв'}
+            initialData={{ text: '', rating: 1 }} />}
       </>
    )
 }

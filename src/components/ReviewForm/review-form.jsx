@@ -4,9 +4,10 @@ import { Counter } from '../Counter/counter'
 import s from './review-form.module.scss'
 import { Button } from '../Button/button'
 import { AuthContext } from '../AuthContext'
+import { useReviewForm } from '../../hooks/use-review-form'
 
 
-export const ReviewForm = ({ onSubmit, isLoading, useReviewForm, title }) => {
+export const ReviewForm = ({ onSubmit, isLoading, title, initialData }) => {
    const { user } = use(AuthContext)
 
    const {
@@ -15,7 +16,7 @@ export const ReviewForm = ({ onSubmit, isLoading, useReviewForm, title }) => {
       setIncrementReview,
       setDecrementReview,
       setDefaultValue
-   } = useReviewForm
+   } = useReviewForm(initialData)
 
    const { text, reviewValue } = form
 
