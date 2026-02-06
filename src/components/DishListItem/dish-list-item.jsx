@@ -1,3 +1,5 @@
+'use client'
+
 import React, { use } from 'react'
 import { DishCounter } from '../DishCounter/dish-counter'
 import { AuthContext } from '../AuthContext'

@@ -1,9 +1,9 @@
-import React, { use } from 'react'
+import React, { useContext } from 'react'
 import { Button } from '../Button/button'
 import { ThemeContext } from '../ThemeContext'
 
 export const ToggleTheme = () => {
-   const { theme, toggleTheme } = use(ThemeContext)
+   const { theme, toggleTheme } = useContext(ThemeContext)
 
    return (
       <Button onClick={toggleTheme}>

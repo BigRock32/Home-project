@@ -1,9 +1,10 @@
+'use client'
+
 import React from 'react'
 
-import { RestaurantsFilters, RestaurantsFiltersSkeletons } from '../../components/RestaurantsFilters'
+import { RestaurantsFilters, RestaurantsFiltersSkeletons } from '../../RestaurantsFilters'
 import { Outlet } from 'react-router';
-
-import { useGetRestaurantsQuery } from '../../redux/services/api';
+import { useGetRestaurantsQuery } from '../../../redux/services/api';
 
 
 export const RestaurantsPage = () => {
