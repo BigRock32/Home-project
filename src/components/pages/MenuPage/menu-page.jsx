@@ -1,11 +1,8 @@
 import React from 'react'
-import { Dishes, DishesSkeletons } from '../../components/Dishes'
-import { useParams } from 'react-router'
-import { useGetDishesByRestaurantIdQuery } from '../../redux/services/api'
+import { Dishes, DishesSkeletons } from '../../Dishes'
+import { useGetDishesByRestaurantIdQuery } from '../../../redux/services/api'
 
-export const MenuPage = () => {
-   const { restaurantId } = useParams()
-
+export const MenuPage = ({ restaurantId }) => {
    const { data, isLoading, isError } = useGetDishesByRestaurantIdQuery(restaurantId)
 
    if (isLoading) {

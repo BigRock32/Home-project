@@ -1,5 +1,5 @@
 import React from 'react'
-import { BaseLink } from '../../components/BaseLink/base-link'
+import { BaseLink } from '../../BaseLink/base-link'
 
 export const HomePage = () => {
    return (
@@ -11,3 +11,11 @@ export const HomePage = () => {
       </div>
    )
 }
+
+
+
+
+
+
+
+

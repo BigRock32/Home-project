@@ -1,12 +1,9 @@
 import React from 'react'
 
-import { Reviews, ReviewsSkeletons } from '../../components/Reviews'
-import { useParams } from 'react-router'
-import { useAddReviewMutation, useGetReviewsByRestaurantIdQuery, useGetUsersQuery } from '../../redux/services/api'
+import { Reviews, ReviewsSkeletons } from '../../Reviews'
+import { useAddReviewMutation, useGetReviewsByRestaurantIdQuery, useGetUsersQuery } from '../../../redux/services/api'
 
-export const ReviewsPage = () => {
-   const { restaurantId } = useParams()
-
+export const ReviewsPage = ({ restaurantId }) => {
    const { isLoading: isUsersLoading, isError: isUsersError } = useGetUsersQuery(restaurantId)
 
    const { data, isFetching: isReviewsLoading, isError: isReviewsError } = useGetReviewsByRestaurantIdQuery(restaurantId)

@@ -1,4 +1,4 @@
-import React, { use } from 'react'
+import React, { useContext } from 'react'
 
 import s from './button.module.scss'
 import classNames from 'classnames'
@@ -8,7 +8,7 @@ export const Button = ({
    children,
    onClick
 }) => {
-   const { theme } = use(ThemeContext)
+   const { theme } = useContext(ThemeContext)
 
    return (
       <button

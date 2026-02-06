@@ -9,7 +9,7 @@ export const RestaurantTabContainer = ({ id, name }) => {
 
    return (
       <Tab
-         to={id}
+         to={`/restaurants/${id}`}
          name={name}
       />
    )

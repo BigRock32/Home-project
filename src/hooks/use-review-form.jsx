@@ -1,3 +1,5 @@
+'use client'
+
 import { useReducer, useEffect } from 'react'
 
 const DEFAULT_FORM_VALUE = {

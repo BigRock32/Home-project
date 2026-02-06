@@ -1,18 +1,14 @@
+'use client'
+
 import React from 'react'
 import { Restaurant } from './restaurant'
-import { useGetRestaurantsQuery } from '../../redux/services/api'
+import StoreProvider from '../../app/StoreProvider'
 
-export const RestaurantContainer = ({ id }) => {
-   const { data } = useGetRestaurantsQuery(undefined, {
-      selectFromResult: (result) => ({
-         ...result,
-         data: result.data?.find(({ id: restaurantId }) => restaurantId === id)
-      })
-   })
-
-   const { name } = data
+export const RestaurantContainer = () => {
 
    return (
-      <Restaurant name={name} />
+      <StoreProvider>
+         <Restaurant />
+      </StoreProvider>
    )
 }

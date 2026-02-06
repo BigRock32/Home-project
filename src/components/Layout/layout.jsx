@@ -1,16 +1,17 @@
-import React, { use } from 'react'
+'use client'
+
+import React, { useContext } from 'react'
 import { Header } from '../Header'
 import { Footer } from '../Footer'
 import { ProgressBar } from '../ProgressBar'
 import { CartContainer } from '../Cart/cart-container'
-import { Outlet } from 'react-router'
 import { AuthContext } from '../AuthContext'
 
 import s from './layout.module.scss'
 
 
-export const Layout = () => {
-   const { auth } = use(AuthContext)
+export const Layout = ({ children }) => {
+   const { auth } = useContext(AuthContext)
 
    return (
       <div className={s.wrapper}>
@@ -18,7 +19,7 @@ export const Layout = () => {
          <Header />
          <section className='section'>
             <div className="container">
-               <Outlet />
+               {children}
                {auth && <CartContainer />}
             </div>
          </section>

@@ -1,26 +1,35 @@
+'use client'
+
 import React from 'react'
-import { Dishes } from '../Dishes'
-import { Reviews } from '../Reviews'
 
 import s from './restaurant.module.scss'
 import { Divider } from '../Divider'
-import { Outlet } from 'react-router'
 import { Tabs } from '../Tabs/tabs'
 import { Tab } from '../Tab'
+import { useGetRestaurantsQuery } from '../../redux/services/api'
+import { useParams } from 'next/navigation'
 
-export const Restaurant = ({ name }) => {
+export const Restaurant = () => {
+   const params = useParams()
+   const { restaurantId: id } = params
 
+   const { data } = useGetRestaurantsQuery(undefined, {
+      selectFromResult: (result) => ({
+         ...result,
+         data: result.data?.find(({ id: restaurantId }) => restaurantId === id)
+      })
+   })
+
+   const basePath = `/restaurants/${id}`
 
    return (
       <div className={s.restaurant}>
-         <h2>{name}</h2>
+         <h2>{data?.name}</h2>
 
          <Tabs>
-            <Tab to='menu' name='Меню' />
-            <Tab to='reviews' name='Отзывы' />
+            <Tab to={`${basePath}/menu`} name='Меню' />
+            <Tab to={`${basePath}/reviews`} name='Отзывы' />
          </Tabs>
-
-         <Outlet />
 
          <Divider />
       </div>
