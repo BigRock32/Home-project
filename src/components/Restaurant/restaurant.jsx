@@ -3,9 +3,9 @@
 import React from 'react'
 
 import s from './restaurant.module.scss'
-import { Divider } from '../Divider'
 import { Tabs } from '../Tabs/tabs'
 import { Tab } from '../Tab'
+import { BackButton } from '../BackButton'
 import { useGetRestaurantsQuery } from '../../redux/services/api'
 import { useParams } from 'next/navigation'
 
@@ -24,6 +24,7 @@ export const Restaurant = () => {
 
    return (
       <div className={s.restaurant}>
+         <BackButton to="/restaurants" label="К списку ресторанов" />
          <h2>{data?.name}</h2>
 
          <Tabs>
@@ -31,7 +32,6 @@ export const Restaurant = () => {
             <Tab to={`${basePath}/reviews`} name='Отзывы' />
          </Tabs>
 
-         <Divider />
       </div>
 
    )

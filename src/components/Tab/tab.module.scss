@@ -1,29 +1,42 @@
 .tab {
-   padding: 0.7rem 1.25rem;
-   border: 1px solid black;
-   border-radius: 0.7rem;
+   padding: var(--spacing-sm) var(--spacing-lg);
+   border: 1px solid var(--color-border);
+   border-radius: var(--radius-md);
    cursor: pointer;
+   font-weight: var(--font-weight-medium);
+   font-size: var(--font-size-sm);
+   color: var(--color-text-secondary);
+   background-color: transparent;
+   transition: all var(--transition-fast);
+}
+
+.tab:hover {
+   border-color: var(--color-primary);
+   color: var(--color-primary);
+   background-color: var(--color-surface);
 }
 
 .dark {
-   background-color: black;
-   color: white;
+   border-color: var(--color-border);
+   color: var(--color-text-secondary);
 }
 
 .active {
-   background-color: black;
+   background-color: var(--color-primary);
    color: white;
-   font-weight: 700;
-   border-width: 2px;
+   border-color: var(--color-primary);
+   font-weight: var(--font-weight-semibold);
    pointer-events: none;
+}
 
-   &.dark {
-      background-color: white;
-      color: black;
-   }
+.active.dark {
+   background-color: var(--color-primary);
+   color: white;
+   border-color: var(--color-primary);
+}
 
-   &.light {
-      background-color: black;
-      color: white;
-   }
+.active.light {
+   background-color: var(--color-primary);
+   color: white;
+   border-color: var(--color-primary);
 }

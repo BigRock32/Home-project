@@ -1,17 +1,18 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ThemeContext as ThemeContextProvider } from '.'
 
 export const ThemeContext = ({ children }) => {
    const [theme, setTheme] = useState("light")
 
+   useEffect(() => {
+      document.documentElement.setAttribute('data-theme', theme)
+   }, [theme])
+
    const toggleTheme = () => {
-      if (theme === 'dark') {
-         setTheme('light')
-      } else {
-         setTheme('dark')
-      }
+      const newTheme = theme === 'dark' ? 'light' : 'dark'
+      setTheme(newTheme)
    }
 
    return (

@@ -3,13 +3,16 @@
 }
 
 .userName {
-   font-weight: 500;
+   font-weight: var(--font-weight-medium);
+   font-size: var(--font-size-sm);
+   color: var(--color-text-primary);
+   padding: var(--spacing-xs) var(--spacing-sm);
 }
 
 .light {
-   color: black;
+   color: var(--color-text-primary);
 }
 
 .dark {
-   color: white;
+   color: var(--color-text-primary);
 }

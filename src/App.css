@@ -1,59 +1,111 @@
+@import "./styles/variables.css";
+
+/* Reset and Base Styles */
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   -webkit-tap-highlight-color: transparent;
+   font-size: 16px;
+}
+
+body {
+   font-family: var(--font-family);
+   font-size: var(--font-size-base);
+   font-weight: var(--font-weight-normal);
+   line-height: 1.5;
+   color: var(--color-text-primary);
+   background-color: var(--color-background);
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   text-rendering: optimizeLegibility;
+   transition:
+      background-color var(--transition-base),
+      color var(--transition-base);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: var(--font-weight-semibold);
+   line-height: 1.2;
+   color: var(--color-text-primary);
+}
+
+h1 {
+   font-size: var(--font-size-3xl);
+}
+h2 {
+   font-size: var(--font-size-2xl);
+   margin-bottom: 1rem;
+}
+h3 {
+   font-size: var(--font-size-xl);
+}
+h4 {
+   font-size: var(--font-size-lg);
+}
+
+p {
+   color: var(--color-text-secondary);
+}
+
+/* Links */
+a {
+   text-decoration: none;
+   color: inherit;
+   transition: color var(--transition-fast);
+}
+
+a:hover {
+   color: var(--color-primary);
+}
+
+/* Form Elements */
 textarea {
    resize: vertical;
 }
 
-a {
-   text-underline-offset: 0.25rem;
-   text-decoration: none;
-   color: inherit;
+input,
+textarea,
+select,
+button {
+   font-family: inherit;
+   font-size: inherit;
 }
 
-/* Remove blue box from links and dropdown on tap on mobile */
-html {
-   \-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+button {
+   cursor: pointer;
+   border: none;
+   background: none;
+   padding: 0;
 }
 
-/* Make text look crisper and more legible in all browsers */
-body {
-   -webkit-font-smoothing: antialiased;
-   -moz-osx-font-smoothing: grayscale;
-   font-smoothing: antialiased;
-   text-rendering: optimizeLegibility;
-   font-family: sans-serif;
-}
-
-/* Fluid responsive */
-html {
-   font-size: calc(16 * (100vw / 1440));
-}
-
-@media (max-width: 479px) {
-   html {
-      font-size: calc(16 * (100vw / 360));
-   }
-}
-
-@media (min-width: 1600px) {
-   html {
-      font-size: 16px;
-   }
-}
-
-/* Variables */
-
-:root {
-   --grey-20: rgba(159, 159, 159, 0.2);
-}
-
-/* Section */
+/* Utility Classes */
 .section {
-   padding: 40px 0;
+   padding: var(--spacing-2xl) 0;
 }
 
-/* Container */
 .container {
    width: 100%;
    max-width: 80rem;
    margin: 0 auto;
+   padding: 0 var(--spacing-lg);
 }
 
+@media (max-width: 768px) {
+   .container {
+      padding: 0 var(--spacing-md);
+   }
+
+   .section {
+      padding: var(--spacing-xl) 0;
+   }
+}

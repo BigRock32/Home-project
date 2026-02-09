@@ -3,12 +3,15 @@
    top: 0;
    left: 0;
    right: 0;
-   z-index: 10;
-   height: 0.5rem;
+   z-index: 1001;
+   height: 3px;
+   background-color: transparent;
 
    &__inner {
       height: 100%;
       width: 0%;
-      background-color: green;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+      transition: width var(--transition-base);
+      box-shadow: 0 0 10px var(--color-primary);
    }
 }

@@ -1,18 +1,36 @@
 .filters {
    display: flex;
-   gap: 2rem;
-   margin-bottom: 1.25rem;
+   gap: var(--spacing-md);
+   margin-bottom: var(--spacing-lg);
+   flex-wrap: wrap;
 }
 
 .skeletons {
    display: flex;
-   gap: 2rem;
-   margin-bottom: 1.25rem;
+   gap: var(--spacing-md);
+   margin-bottom: var(--spacing-lg);
+   flex-wrap: wrap;
 }
 
 .skeleton {
-   background-color: var(--grey-20);
+   background: linear-gradient(
+      90deg,
+      var(--color-surface) 0%,
+      var(--color-border) 50%,
+      var(--color-surface) 100%
+   );
+   background-size: 200% 100%;
+   animation: loading 1.5s ease-in-out infinite;
    height: 3rem;
    width: 8rem;
-   border-radius: 0.7rem;
+   border-radius: var(--radius-md);
+}
+
+@keyframes loading {
+   0% {
+      background-position: 200% 0;
+   }
+   100% {
+      background-position: -200% 0;
+   }
 }
