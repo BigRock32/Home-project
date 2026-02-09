@@ -1,4 +1,4 @@
-import React, { use } from 'react'
+
 import s from './header.module.scss'
 import { ToggleTheme } from '../ToggleTheme/toggle-theme'
 import { HeaderAuth } from '../HeaderAuth'
