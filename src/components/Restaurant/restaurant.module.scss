@@ -1,6 +1,20 @@
 .restaurant {
-   padding: 1.25rem;
-   border-radius: 0.6rem;
-   border: 1px solid black;
-   min-width: 25rem ;
+   padding: var(--spacing-xl);
+   border-radius: var(--radius-lg);
+   border: 1px solid var(--color-border);
+   background-color: var(--color-surface-elevated);
+   box-shadow: var(--shadow-sm);
+   transition: all var(--transition-base);
+}
+
+.restaurant:hover {
+   box-shadow: var(--shadow-md);
+   border-color: var(--color-border-hover);
+}
+
+@media (max-width: 768px) {
+   .restaurant {
+      padding: var(--spacing-lg);
+      min-width: auto;
+   }
 }

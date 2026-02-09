@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Reviews, ReviewsSkeletons } from '../../Reviews'
+import { BackButton } from '../../BackButton'
 import { useAddReviewMutation, useGetReviewsByRestaurantIdQuery, useGetUsersQuery } from '../../../redux/services/api'
 
 export const ReviewsPage = ({ restaurantId }) => {
@@ -23,6 +24,9 @@ export const ReviewsPage = ({ restaurantId }) => {
 
 
    return (
-      <Reviews reviewsData={data} onSubmit={handleSubmit} isAddReviewLoading={isAddReviewLoading} />
+      <>
+         <BackButton to={`/restaurants/${restaurantId}`} label="К ресторану" />
+         <Reviews reviewsData={data} onSubmit={handleSubmit} isAddReviewLoading={isAddReviewLoading} />
+      </>
    )
 }

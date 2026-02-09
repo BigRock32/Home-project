@@ -1,5 +1,6 @@
 import React from 'react'
 import { Dishes, DishesSkeletons } from '../../Dishes'
+import { BackButton } from '../../BackButton'
 import { useGetDishesByRestaurantIdQuery } from '../../../redux/services/api'
 
 export const MenuPage = ({ restaurantId }) => {
@@ -14,6 +15,9 @@ export const MenuPage = ({ restaurantId }) => {
    }
 
    return (
-      <Dishes dishesData={data} />
+      <>
+         <BackButton to={`/restaurants/${restaurantId}`} label="К ресторану" />
+         <Dishes dishesData={data} />
+      </>
    )
 }

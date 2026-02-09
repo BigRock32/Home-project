@@ -1,19 +1,15 @@
 import React from 'react'
 import { CartItemContainer } from '../CartItem/cart-item-container'
-import { Divider } from '../Divider'
+import s from './cart.module.scss'
 
 export const Cart = ({ itemsIds }) => {
-
    return (
-      <>
-         <Divider />
-         <h4>Корзина:</h4>
-
-         <ul>
-            {itemsIds.map((id) => (
-               <CartItemContainer key={id} id={id} />
-            ))}
-         </ul>
-      </>
+      <ul className={s.list}>
+         {itemsIds.map((id) => (
+            <li key={id}>
+               <CartItemContainer id={id} />
+            </li>
+         ))}
+      </ul>
    )
 }

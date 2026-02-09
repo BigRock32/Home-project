@@ -1,4 +1,13 @@
 .link {
-   color: blue;
-   text-decoration: underline;
+   color: var(--color-text-secondary);
+   font-weight: var(--font-weight-medium);
+   font-size: var(--font-size-sm);
+   transition: color var(--transition-fast);
+   padding: var(--spacing-xs) var(--spacing-sm);
+   border-radius: var(--radius-sm);
+}
+
+.link:hover {
+   color: var(--color-primary);
+   background-color: var(--color-surface);
 }
