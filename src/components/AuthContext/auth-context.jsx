@@ -7,11 +7,11 @@ import { AuthContext as AuthContextProvider } from '.'
 import { useAuth } from './use-auth'
 
 export const AuthContext = ({ children }) => {
-   const { state, login, logout } = useAuth()
-   const { auth, user } = state
+   const { state, login, register, logout } = useAuth()
+   const { auth, user, isLoading } = state
 
    return (
-      <AuthContextProvider value={{ auth, user, login, logout }}>
+      <AuthContextProvider value={{ auth, user, login, register, logout, isLoading }}>
          {children}
       </AuthContextProvider>
    )

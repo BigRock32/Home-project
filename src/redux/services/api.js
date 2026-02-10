@@ -1,8 +1,19 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
+const baseQuery = fetchBaseQuery({
+   baseUrl: 'http://localhost:3001/api',
+   prepareHeaders: (headers, { getState }) => {
+      const token = localStorage.getItem('authToken');
+      if (token) {
+         headers.set('authorization', `Bearer ${token}`);
+      }
+      return headers;
+   },
+});
+
 export const api = createApi({
    reducerPath: 'api',
-   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001/api' }),
+   baseQuery,
    tagTypes: ['reviews'],
    endpoints: (builder) => ({
       getRestaurants: builder.query({
@@ -34,6 +45,23 @@ export const api = createApi({
       getDishesByRestaurantId: builder.query({
          query: (restaurantId) => `/dishes?restaurantId=${restaurantId}`,
       }),
+      register: builder.mutation({
+         query: (credentials) => ({
+            url: '/auth/register',
+            method: 'POST',
+            body: credentials,
+         }),
+      }),
+      login: builder.mutation({
+         query: (credentials) => ({
+            url: '/auth/login',
+            method: 'POST',
+            body: credentials,
+         }),
+      }),
+      getCurrentUser: builder.query({
+         query: () => '/auth/me',
+      }),
    })
 })
 
@@ -44,5 +72,9 @@ export const {
    useGetReviewsByRestaurantIdQuery,
    useAddReviewMutation,
    useUpdateReviewMutation,
-   useGetDishesByRestaurantIdQuery
+   useGetDishesByRestaurantIdQuery,
+   useRegisterMutation,
+   useLoginMutation,
+   useGetCurrentUserQuery,
+   useLazyGetCurrentUserQuery,
 } = api

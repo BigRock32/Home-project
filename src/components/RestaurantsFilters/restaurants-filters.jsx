@@ -4,6 +4,9 @@ import s from './restaurants-filters.module.scss'
 import { RestaurantTabContainer } from '../RestaurantTab'
 
 export const RestaurantsFilters = ({ restaurantsData }) => {
+  if (!restaurantsData || !Array.isArray(restaurantsData) || restaurantsData.length === 0) {
+    return null
+  }
 
   return (
     <div className={s.filters}>
