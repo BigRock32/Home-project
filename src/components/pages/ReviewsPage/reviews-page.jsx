@@ -22,11 +22,10 @@ export const ReviewsPage = ({ restaurantId }) => {
       return 'Ошибка! Отзывы не появятся.'
    }
 
-
    return (
       <>
          <BackButton to={`/restaurants/${restaurantId}`} label="К ресторану" />
-         <Reviews reviewsData={data} onSubmit={handleSubmit} isAddReviewLoading={isAddReviewLoading} />
+         <Reviews reviewsData={data || []} onSubmit={handleSubmit} isAddReviewLoading={isAddReviewLoading} />
       </>
    )
 }

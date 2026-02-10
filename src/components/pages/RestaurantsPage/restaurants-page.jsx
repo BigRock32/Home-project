@@ -3,7 +3,6 @@
 import React from 'react'
 
 import { RestaurantsFilters, RestaurantsFiltersSkeletons } from '../../RestaurantsFilters'
-import { Outlet } from 'react-router';
 import { useGetRestaurantsQuery } from '../../../redux/services/api';
 
 
@@ -18,10 +17,11 @@ export const RestaurantsPage = () => {
       return 'Ошибка! Рестораны не появятся.'
    }
 
+   if (!data) {
+      return <RestaurantsFiltersSkeletons quantity={4} />
+   }
+
    return (
-      <>
-         <RestaurantsFilters restaurantsData={data} />
-         <Outlet />
-      </>
+      <RestaurantsFilters restaurantsData={data} />
    )
 }

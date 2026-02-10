@@ -30,12 +30,14 @@ export const ReviewForm = ({ onSubmit, isLoading, title, initialData }) => {
             <textarea value={text} onChange={(e) => setText(e.target.value)} className='form__input' type="text" placeholder='введите текст' />
          </form>
 
-         <Button onClick={setDefaultValue}>Очистить</Button>
-         <Button onClick={() => {
-            onSubmit({
-               text, rating: reviewValue, userId: user.id
-            })
-         }}>{isLoading ? 'Подождите..' : 'Отправить'}</Button>
+         <div className={s.buttons}>
+            <Button onClick={setDefaultValue}>Очистить</Button>
+            <Button onClick={() => {
+               onSubmit({
+                  text, rating: reviewValue, userId: user.id
+               })
+            }}>{isLoading ? 'Подождите..' : 'Отправить'}</Button>
+         </div>
       </>
    )
 }

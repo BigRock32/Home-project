@@ -94,4 +94,7 @@ router.get("/users", (req, res, next) => {
   reply(res, users);
 });
 
+const authRoutes = require('./routes/auth');
+router.use('/auth', authRoutes);
+
 module.exports = router;

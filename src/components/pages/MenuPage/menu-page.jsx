@@ -17,7 +17,7 @@ export const MenuPage = ({ restaurantId }) => {
    return (
       <>
          <BackButton to={`/restaurants/${restaurantId}`} label="К ресторану" />
-         <Dishes dishesData={data} />
+         <Dishes dishesData={data || []} />
       </>
    )
 }

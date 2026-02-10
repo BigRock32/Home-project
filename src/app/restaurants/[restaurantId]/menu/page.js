@@ -1,10 +1,11 @@
 'use client'
 
+import { use } from 'react'
 import StoreProvider from '../../../StoreProvider'
 import { MenuPage } from '../../../../components/pages/MenuPage/menu-page'
 
 const RestaurantMenuPage = ({ params }) => {
-   const { restaurantId } = params
+   const { restaurantId } = use(params)
 
    return (
       <StoreProvider>

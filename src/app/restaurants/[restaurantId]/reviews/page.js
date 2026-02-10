@@ -1,10 +1,11 @@
 'use client'
 
+import { use } from 'react'
 import StoreProvider from '../../../StoreProvider'
 import { ReviewsPage } from '../../../../components/pages/ReviewsPage/reviews-page'
 
-const RestaurantReviewsPage = async ({ params }) => {
-   const { restaurantId } = await params
+const RestaurantReviewsPage = ({ params }) => {
+   const { restaurantId } = use(params)
 
    return (
       <StoreProvider>
