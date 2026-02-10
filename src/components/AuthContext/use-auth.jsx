@@ -42,6 +42,7 @@ export const useAuth = () => {
                   dispatch({ type: SET_LOADING_ACTION, payload: false })
                }
             } catch (error) {
+               console.error('Error checking auth:', error)
                localStorage.removeItem('authToken')
                dispatch({ type: SET_LOADING_ACTION, payload: false })
             }
