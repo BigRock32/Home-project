@@ -1,5 +1,3 @@
-const config = {
-   distDir: './dist'
-}
+const config = {}
 
 export default config
