@@ -1,13 +1,14 @@
 import React from 'react'
-import { BaseLink } from '../../BaseLink/base-link'
+import { Tab } from '../../Tab'
+import s from './home-page.module.scss'
 
 export const HomePage = () => {
    return (
-      <div>
+      <div className={s.wrapper}>
          <h1>
             HomePage
          </h1>
-         <BaseLink to='/restaurants'>restaurants</BaseLink>
+         <Tab to='/restaurants' name='Restaurants'>restaurants</Tab>
       </div>
    )
 }
