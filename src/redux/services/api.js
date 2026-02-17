@@ -1,7 +1,20 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
+const getApiUrl = () => {
+   if (typeof window !== 'undefined') {
+      if (process.env.NEXT_PUBLIC_API_URL) {
+         return process.env.NEXT_PUBLIC_API_URL;
+      }
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+         return 'http://localhost:3001/api';
+      }
+      return 'https://restaurants-api-rbvf.onrender.com/api';
+   }
+   return process.env.NEXT_PUBLIC_API_URL || 'https://restaurants-api-rbvf.onrender.com/api';
+};
+
 const baseQuery = fetchBaseQuery({
-   baseUrl: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api',
+   baseUrl: getApiUrl(),
    prepareHeaders: (headers) => {
       const token = localStorage.getItem('authToken');
       if (token) {
