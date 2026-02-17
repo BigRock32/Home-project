@@ -1,0 +1,45 @@
+/* [project]/Work/Projects/Home-project/src/components/Button/button.module.scss.module.css [app-client] (css) */
+.button-module-scss-module__8HmYJG__button {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid #0000;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+
+.button-module-scss-module__8HmYJG__light {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.button-module-scss-module__8HmYJG__light:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.button-module-scss-module__8HmYJG__dark {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.button-module-scss-module__8HmYJG__dark:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.button-module-scss-module__8HmYJG__button:active {
+  transform: translateY(0);
+}
+
+/*# sourceMappingURL=93e46_Home-project_src_components_Button_button_module_scss_module_css_bad6b30c._.single.css.map*/

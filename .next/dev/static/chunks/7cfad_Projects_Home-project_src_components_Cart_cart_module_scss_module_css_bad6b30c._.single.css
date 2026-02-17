@@ -1,0 +1,24 @@
+/* [project]/Work/Projects/Home-project/src/components/Cart/cart.module.scss.module.css [app-client] (css) */
+.cart-module-scss-module__w6Lvga__list {
+  gap: var(--spacing-md);
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.cart-module-scss-module__w6Lvga__list li {
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  transition: all var(--transition-fast);
+}
+
+.cart-module-scss-module__w6Lvga__list li:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+/*# sourceMappingURL=7cfad_Projects_Home-project_src_components_Cart_cart_module_scss_module_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///turbopack:///[project]/Work/Projects/Home-project/src/components/BaseLink/base-link.module.scss"],"sourcesContent":[".link {\n   color: var(--color-text-secondary);\n   font-weight: var(--font-weight-medium);\n   font-size: var(--font-size-sm);\n   transition: color var(--transition-fast);\n   padding: var(--spacing-xs) var(--spacing-sm);\n   border-radius: var(--radius-sm);\n}\n\n.link:hover {\n   color: var(--color-primary);\n   background-color: var(--color-surface);\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;AASA"}}]
+}

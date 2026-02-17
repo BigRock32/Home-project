@@ -1,0 +1,40 @@
+/* [project]/Work/Projects/Home-project/src/components/Counter/counter.module.scss.module.css [app-client] (css) */
+.counter-module-scss-module__easoYq__counter {
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+  display: flex;
+}
+
+.counter-module-scss-module__easoYq__counter button {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface-elevated);
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+  transition: all var(--transition-fast);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.counter-module-scss-module__easoYq__counter button:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.counter-module-scss-module__easoYq__counter button:active {
+  transform: scale(.95);
+}
+
+.counter-module-scss-module__easoYq__counter span {
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  min-width: 2rem;
+  color: var(--color-text-primary);
+}
+
+/*# sourceMappingURL=93e46_Home-project_src_components_Counter_counter_module_scss_module_css_bad6b30c._.single.css.map*/

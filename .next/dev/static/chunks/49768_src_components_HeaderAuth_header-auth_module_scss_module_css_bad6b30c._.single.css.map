@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///turbopack:///[project]/Work/Projects/Home-project/src/components/HeaderAuth/header-auth.module.scss"],"sourcesContent":[".button {\n   cursor: pointer;\n}\n\n.userName {\n   font-weight: var(--font-weight-medium);\n   font-size: var(--font-size-sm);\n   color: var(--color-text-primary);\n   padding: var(--spacing-xs) var(--spacing-sm);\n}\n\n.light {\n   color: var(--color-text-primary);\n}\n\n.dark {\n   color: var(--color-text-primary);\n}\n"],"names":[],"mappings":"AAAA;;;;AAIA;;;;;;;AAOA"}}]
+}

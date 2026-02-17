@@ -1,0 +1,98 @@
+/* [project]/Work/Projects/Home-project/src/components/LoginForm/login-form.module.scss.module.css [app-client] (css) */
+.login-form-module-scss-module__KRC34a__container {
+  min-height: 60vh;
+  padding: var(--spacing-xl);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.login-form-module-scss-module__KRC34a__formWrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: var(--spacing-2xl);
+  background-color: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.login-form-module-scss-module__KRC34a__title {
+  margin: 0 0 var(--spacing-xl) 0;
+  text-align: center;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.login-form-module-scss-module__KRC34a__form {
+  gap: var(--spacing-lg);
+  flex-direction: column;
+  display: flex;
+}
+
+.login-form-module-scss-module__KRC34a__error {
+  padding: var(--spacing-md);
+  background-color: var(--color-error);
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+.login-form-module-scss-module__KRC34a__field {
+  gap: var(--spacing-sm);
+  flex-direction: column;
+  display: flex;
+}
+
+.login-form-module-scss-module__KRC34a__label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.login-form-module-scss-module__KRC34a__input {
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+  transition: all var(--transition-fast);
+  font-family: inherit;
+}
+
+.login-form-module-scss-module__KRC34a__input:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px #6366f11a;
+}
+
+.login-form-module-scss-module__KRC34a__input:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.login-form-module-scss-module__KRC34a__submitButton {
+  width: 100%;
+  margin-top: var(--spacing-sm);
+}
+
+.login-form-module-scss-module__KRC34a__footer {
+  margin-top: var(--spacing-lg);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.login-form-module-scss-module__KRC34a__link {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.login-form-module-scss-module__KRC34a__link:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=93e46_Home-project_src_components_LoginForm_login-form_module_scss_module_52cf94a4.css.map*/

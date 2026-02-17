@@ -1,0 +1,17 @@
+/* [project]/Work/Projects/Home-project/src/components/HeaderAuth/header-auth.module.scss.module.css [app-client] (css) */
+.header-auth-module-scss-module__zp3afW__button {
+  cursor: pointer;
+}
+
+.header-auth-module-scss-module__zp3afW__userName {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.header-auth-module-scss-module__zp3afW__light, .header-auth-module-scss-module__zp3afW__dark {
+  color: var(--color-text-primary);
+}
+
+/*# sourceMappingURL=49768_src_components_HeaderAuth_header-auth_module_scss_module_css_bad6b30c._.single.css.map*/

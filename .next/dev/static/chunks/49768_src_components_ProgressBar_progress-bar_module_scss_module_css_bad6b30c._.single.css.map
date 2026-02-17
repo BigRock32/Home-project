@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///turbopack:///[project]/Work/Projects/Home-project/src/components/ProgressBar/progress-bar.module.scss"],"sourcesContent":[".progressbar {\n   position: fixed;\n   top: 0;\n   left: 0;\n   right: 0;\n   z-index: 1001;\n   height: 3px;\n   background-color: transparent;\n\n   &__inner {\n      height: 100%;\n      width: 0%;\n      background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));\n      transition: width var(--transition-base);\n      box-shadow: 0 0 10px var(--color-primary);\n   }\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;;AASG"}}]
+}

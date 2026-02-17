@@ -1,0 +1,119 @@
+/* [project]/Work/Projects/Home-project/src/components/CartModal/cart-modal.module.scss.module.css [app-client] (css) */
+.cart-modal-module-scss-module__gY4THW__overlay {
+  background-color: var(--color-overlay);
+  z-index: 999;
+  animation: cart-modal-module-scss-module__gY4THW__fadeIn var(--transition-base);
+  position: fixed;
+  inset: 0;
+}
+
+.cart-modal-module-scss-module__gY4THW__modal {
+  top: 5.5rem;
+  right: var(--spacing-lg);
+  background-color: var(--color-surface-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 420px;
+  max-height: calc(100vh - 7rem);
+  box-shadow: var(--shadow-xl);
+  z-index: 1000;
+  animation: cart-modal-module-scss-module__gY4THW__slideIn var(--transition-base);
+  flex-direction: column;
+  display: flex;
+  position: fixed;
+  overflow: hidden;
+}
+
+.cart-modal-module-scss-module__gY4THW__header {
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.cart-modal-module-scss-module__gY4THW__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.cart-modal-module-scss-module__gY4THW__closeButton {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  background: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  display: flex;
+}
+
+.cart-modal-module-scss-module__gY4THW__closeButton:hover {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+.cart-modal-module-scss-module__gY4THW__closeButton:active {
+  transform: scale(.95);
+}
+
+.cart-modal-module-scss-module__gY4THW__content {
+  padding: var(--spacing-lg);
+  flex: 1;
+  overflow-y: auto;
+}
+
+.cart-modal-module-scss-module__gY4THW__empty {
+  padding: var(--spacing-2xl);
+  color: var(--color-text-secondary);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.cart-modal-module-scss-module__gY4THW__empty p {
+  font-size: var(--font-size-base);
+  margin: 0;
+}
+
+@keyframes cart-modal-module-scss-module__gY4THW__fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cart-modal-module-scss-module__gY4THW__slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .cart-modal-module-scss-module__gY4THW__modal {
+    top: 4.5rem;
+    right: var(--spacing-md);
+    left: var(--spacing-md);
+    max-width: none;
+    max-height: calc(100vh - 6rem);
+  }
+}
+
+/*# sourceMappingURL=49768_src_components_CartModal_cart-modal_module_scss_module_css_bad6b30c._.single.css.map*/

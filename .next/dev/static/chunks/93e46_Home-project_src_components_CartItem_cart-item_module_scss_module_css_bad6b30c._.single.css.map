@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///turbopack:///[project]/Work/Projects/Home-project/src/components/CartItem/cart-item.module.scss"],"sourcesContent":[".item {\n   display: flex;\n   flex-direction: column;\n   gap: var(--spacing-sm);\n}\n\n.header {\n   display: flex;\n   justify-content: space-between;\n   align-items: center;\n   gap: var(--spacing-md);\n}\n\n.name {\n   flex: 1;\n   font-weight: var(--font-weight-medium);\n   color: var(--color-text-primary);\n   font-size: var(--font-size-base);\n}\n\n.name:hover {\n   color: var(--color-primary);\n}\n\n.amount {\n   font-size: var(--font-size-sm);\n   color: var(--color-text-secondary);\n   font-weight: var(--font-weight-normal);\n}\n\n.controls {\n   display: flex;\n   align-items: center;\n   gap: var(--spacing-md);\n   margin-top: var(--spacing-xs);\n}\n\n"],"names":[],"mappings":"AAAA;;;;;;AAMA;;;;;;;AAOA;;;;;;;AAOA;;;;AAIA;;;;;;AAMA"}}]
+}

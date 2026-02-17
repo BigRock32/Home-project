@@ -1,0 +1,15 @@
+/* [project]/Work/Projects/Home-project/src/components/Layout/layout.module.scss.module.css [app-client] (css) */
+.layout-module-scss-module__sbs-6W__wrapper {
+  background-color: var(--color-background);
+  min-height: 100vh;
+  transition: background-color var(--transition-base);
+  padding-top: 5.5rem;
+}
+
+@media (max-width: 768px) {
+  .layout-module-scss-module__sbs-6W__wrapper {
+    padding-top: 4.5rem;
+  }
+}
+
+/*# sourceMappingURL=93e46_Home-project_src_components_Layout_layout_module_scss_module_css_bad6b30c._.single.css.map*/

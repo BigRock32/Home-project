@@ -1,0 +1,16 @@
+/* [project]/Work/Projects/Home-project/src/components/BaseLink/base-link.module.scss.module.css [app-client] (css) */
+.base-link-module-scss-module__AgyvdW__link {
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+  transition: color var(--transition-fast);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+}
+
+.base-link-module-scss-module__AgyvdW__link:hover {
+  color: var(--color-primary);
+  background-color: var(--color-surface);
+}
+
+/*# sourceMappingURL=93e46_Home-project_src_components_BaseLink_base-link_module_scss_module_css_bad6b30c._.single.css.map*/

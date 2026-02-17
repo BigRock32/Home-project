@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///turbopack:///[project]/Work/Projects/Home-project/src/components/Layout/layout.module.scss"],"sourcesContent":[".wrapper {\n   padding-top: 5.5rem;\n   min-height: 100vh;\n   background-color: var(--color-background);\n   transition: background-color var(--transition-base);\n}\n\n@media (max-width: 768px) {\n   .wrapper {\n      padding-top: 4.5rem;\n   }\n}"],"names":[],"mappings":"AAAA;;;;;;;AAOA;EACG"}}]
+}

@@ -1,0 +1,39 @@
+/* [project]/Work/Projects/Home-project/src/components/CartItem/cart-item.module.scss.module.css [app-client] (css) */
+.cart-item-module-scss-module__JyqHma__item {
+  gap: var(--spacing-sm);
+  flex-direction: column;
+  display: flex;
+}
+
+.cart-item-module-scss-module__JyqHma__header {
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  display: flex;
+}
+
+.cart-item-module-scss-module__JyqHma__name {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-base);
+  flex: 1;
+}
+
+.cart-item-module-scss-module__JyqHma__name:hover {
+  color: var(--color-primary);
+}
+
+.cart-item-module-scss-module__JyqHma__amount {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-normal);
+}
+
+.cart-item-module-scss-module__JyqHma__controls {
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xs);
+  display: flex;
+}
+
+/*# sourceMappingURL=93e46_Home-project_src_components_CartItem_cart-item_module_scss_module_css_bad6b30c._.single.css.map*/

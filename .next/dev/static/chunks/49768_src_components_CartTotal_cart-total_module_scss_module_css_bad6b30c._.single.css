@@ -1,0 +1,51 @@
+/* [project]/Work/Projects/Home-project/src/components/CartTotal/cart-total.module.scss.module.css [app-client] (css) */
+.cart-total-module-scss-module__JAHKva__wrapper {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform var(--transition-fast);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.cart-total-module-scss-module__JAHKva__wrapper:hover {
+  transform: scale(1.1);
+}
+
+.cart-total-module-scss-module__JAHKva__wrapper:active {
+  transform: scale(.95);
+}
+
+.cart-total-module-scss-module__JAHKva__icon {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0) saturate(100%) invert(var(--icon-invert, 0));
+  transition: filter var(--transition-fast);
+}
+
+[data-theme="dark"] .cart-total-module-scss-module__JAHKva__icon {
+  --icon-invert: 1;
+}
+
+.cart-total-module-scss-module__JAHKva__amount {
+  font-size: var(--font-size-xs);
+  border-radius: var(--radius-full);
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  padding: 0 var(--spacing-xs);
+  background-color: var(--color-primary);
+  color: #fff;
+  font-weight: var(--font-weight-semibold);
+  box-shadow: var(--shadow-sm);
+  pointer-events: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: -.5rem;
+  right: -.5rem;
+}
+
+/*# sourceMappingURL=49768_src_components_CartTotal_cart-total_module_scss_module_css_bad6b30c._.single.css.map*/

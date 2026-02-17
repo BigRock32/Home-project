@@ -1,0 +1,20 @@
+/* [project]/Work/Projects/Home-project/src/components/ProgressBar/progress-bar.module.scss.module.css [app-client] (css) */
+.progress-bar-module-scss-module__xehEJa__progressbar {
+  z-index: 1001;
+  background-color: #0000;
+  height: 3px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.progress-bar-module-scss-module__xehEJa__progressbar__inner {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+  width: 0%;
+  height: 100%;
+  transition: width var(--transition-base);
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+/*# sourceMappingURL=49768_src_components_ProgressBar_progress-bar_module_scss_module_css_bad6b30c._.single.css.map*/
